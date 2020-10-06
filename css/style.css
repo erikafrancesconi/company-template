@@ -373,4 +373,8 @@ input:focus {
   .topnav .social {
     margin: 0;
   }
+  .content-centered label, .content-centered input {
+    display: block;
+    margin: 0.5rem auto;
+  }
 }

@@ -1,11 +1,11 @@
 0. do i need normalize.css?
 1. social icons are too small to tap
-2. check if margin and paddings are the same (use rem)
+OK - 2. check if margin and paddings are the same (use rem in sections)
 3. test with multiple browsers
 4. dropdown menu on header; remove social and contact button (it can be on the menu). Menu on the right?
 5. skip link
 6. focus-within per evidenziare l'elemento se un suo figlio ha il focus
-7. use rem for font sizes
+7. use rem for font sizes & margin/padding (only sections)
 8. dark mode
-9. clean up css, replace divs with sections
+OK - 9. clean up css, replace divs with sections
 10. analize page structure
