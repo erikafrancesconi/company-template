@@ -100,7 +100,7 @@
       <div class="content">
         <h2 class="h3">Subscribe to our newsletter</h2>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos vitae ad perspiciatis soluta ullam explicabo consequatur.</p>
-        <form action="">
+        <form action="" class="onerow">
           <label for="email">Email address</label>
           <input type="email" id="email" name="email" required>
           <input type="submit" value="Subscribe" class="btn btn-blue">
@@ -114,7 +114,7 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas excepturi quos incidunt nam, placeat obcaecati esse tenetur, illum quaerat modi quae? In animi repellat voluptate obcaecati, corrupti cupiditate voluptatem. Culpa.</p>
       </div>
       <div class="cards">
-        <ul>
+        <ul class="row jcc">
           <li class="card">  
             <div class="img">
               <img src="./images/people/1.jpg" alt="Portrait of Person Name">
@@ -151,7 +151,7 @@
     <section class="content-centered content-odd">
       <h2 class="h3">Meet our team</h2>
       <div class="cards">
-        <ul>
+        <ul class="row jcc">
           <li class="card2">  
             <div class="img">
               <img src="./images/people/4.jpg" alt="Portrait of Person Name">
@@ -185,6 +185,59 @@
             <p>"Lorem, ipsum dolor sit amet consectetur adipisicing elit."</p> 
           </li>
         </ul>
+      </div>
+    </section>
+    <section class="content-centered">
+      <div class="content">
+        <h2 class="h3">Contact Us</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam explicabo necessitatibus accusantium nobis voluptatibus aliquam nostrum nisi exercitationem ut!</p>
+      </div>
+      <div class="row jcsb jccsmall">
+        <div class="column">
+            <div class="details">
+              <h3 class="h4">Call or email</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+          <div class="details">
+            <h4 class="h5">Support</h4>
+            <p>Our technical support is available by phone or email from 11am to 11pm BST, Monday through Friday.</p>
+            <p><a href="tel:+800 3005 4300">+800 3005 4300</a></p>
+            <p><a href="mailto:support@eflab.it">support@eflab.it</a></p>
+          </div>
+          <div class="details">
+            <h4 class="h5">Sales</h4>
+            <p>Our technical support is available by phone or email from 11am to 11pm BST, Monday through Friday.</p>
+            <p><a href="tel:+800 3005 4300">+800 3005 4300</a></p>
+            <p><a href="mailto:support@eflab.it">support@eflab.it</a></p>
+          </div>
+          <div class="details">
+            <h4 class="h5">General Inquiries</h4>
+            <p><a href="mailto:support@eflab.it">support@eflab.it</a></p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="details">
+            <h3 class="h4">Drop us a line</h3>
+            <form action="" class="columnform">
+              <label for="contactname">Name
+                <input type="text" name="contactname" id="contactname">
+              </label>
+              <label for="contactcountry">Country
+                <input type="text" name="contactcountry" id="contactcountry">
+              </label>
+              <label for="contactemail">Email
+                <input type="email" name="contactemail" id="contactemail">
+              </label>
+              <label for="contactphone">Phone
+                <input type="tel" name="contactphone" id="contactphone">
+              </label>
+              <label for="contactmsg">Your message for us
+                <textarea name="contactmsg" id="contactmsg" rows="10"></textarea>
+              </label>
+              <input type="submit" value="Send your message" class="btn btn-blue">
+            </form>
+          </div>
+        </div>
       </div>
     </section>
 
