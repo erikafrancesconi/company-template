@@ -14,8 +14,12 @@
   outline: 3px dashed var(--primary);
 }
 
-button:focus {
+:focus:not(:focus-visible) { 
   outline: 0;
+}
+
+button:focus {
+  outline: none;
 }
 
 button, input[type=submit] {
@@ -185,11 +189,11 @@ input:focus, textarea:focus {
   margin-right: 1rem;
 }
 
-.topnav svg {
+.topnav svg, .bottomcontent svg {
   fill: var(--text-color);
 }
 
-.topnav svg:hover {
+.topnav svg:hover, .bottomcontent svg:hover {
   fill: var(--primary);
 }
 
@@ -254,10 +258,15 @@ input:focus, textarea:focus {
   justify-content: space-around;
 }
 
-.column {
+.column2 {
   width: 40%;
   min-width: 22rem;
   text-align: left;
+}
+
+.column4 {
+  width: 20%;
+  min-width: 12rem;
 }
 
 .columnform input:not([type=submit]), .columnform textarea, .columnform label {
@@ -283,10 +292,12 @@ input:focus, textarea:focus {
 }
 
 .card2 {
-  max-width: 12rem;
   margin: 1rem;
   padding: 2rem 1.3rem;
   text-align: center;
+  max-width: 12rem;
+  min-width: auto;
+  width: auto;
 }
 
 .card:hover {
@@ -361,6 +372,31 @@ input:focus, textarea:focus {
   margin: 0 0 0.5em 0;
 }
 
+.mp {
+  padding: 4rem;
+}
+
+.bottomcontent ul {
+  list-style-type: none;
+}
+
+.bottomcontent li {
+  display: inline-block;
+  padding: 0 1em 1em 0;
+}
+
+.bottomcontent .column4 {
+  padding: 0 1rem;
+}
+
+.mainfooter {
+  text-align: center;
+}
+
+.mainfooter p {
+  font-size: 1em;
+}
+
 @media only screen and (max-width: 992px) {
   .content-centered {
     padding: 2rem;
@@ -433,15 +469,24 @@ input:focus, textarea:focus {
   .jccsmall {
     justify-content: center;
   }
-  .column {
+  .column2 {
     text-align: center;
     border-bottom: 1px solid var(--border-grey);
     padding-bottom: 2rem;
   }
-  .column label {
+  .column2 label {
     text-align: left;
   }
   .columnform input:not([type=submit]), .columnform textarea, .columnform label {
     width: 100%;
+  }
+  .mp {
+    padding: 2rem;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .mp {
+    padding: 0;
   }
 }
