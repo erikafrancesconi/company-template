@@ -66,6 +66,12 @@ h5, .h5 {
   font-size: 1.2em;
 }
 
+.h5 {
+  text-transform: none;
+  line-height: unset;
+  letter-spacing: unset;
+}
+
 a {
   color: var(--primary);
 }
@@ -150,8 +156,8 @@ input:focus, textarea:focus {
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid var(--border-grey);
-  padding-bottom: 0.75rem;
-  margin-bottom: 3rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .topnav nav a {
@@ -172,10 +178,6 @@ input:focus, textarea:focus {
   border-bottom: 0;
 }
 
-.topnav ul {
-  margin-top: 1.5rem;
-}
-
 .topnav ul, .topnav li {
   display: inline-block;
 }
@@ -186,11 +188,12 @@ input:focus, textarea:focus {
 
 .topnav .social {
   margin-left: auto;
-  margin-right: 1rem;
+
 }
 
 .topnav svg, .bottomcontent svg {
   fill: var(--text-color);
+  padding-right: 16px;
 }
 
 .topnav svg:hover, .bottomcontent svg:hover {
@@ -202,22 +205,13 @@ input:focus, textarea:focus {
   display: none;
 }
 
-.hero {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.hero img {
-  max-height: 100vh;
-}
-
 .sponsors {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
   align-items: center;
   background-color: var(--text-color);
-  margin: 4rem 0;
+  margin: 3.5rem 0;
 }
 
 .sponsors img {
@@ -256,6 +250,10 @@ input:focus, textarea:focus {
 
 .jcsa {
   justify-content: space-around;
+}
+
+.aic {
+  align-items: center;
 }
 
 .column2 {
@@ -413,6 +411,9 @@ input:focus, textarea:focus {
     font-size: 2em;
     letter-spacing: initial;
   }
+  h3, .h3 {
+    margin-top: 0;
+  }
   p {
     font-size: 1.2em;
     line-height: 1.2em;
@@ -451,6 +452,10 @@ input:focus, textarea:focus {
   .hamburger-show {
     display: block;
   }
+  .topnav {
+    padding-top: 0.5em;
+    margin-bottom: 1.5em;
+  }
   .topnav ul {
     margin-top: 0;
     margin-bottom: 0.2em;
@@ -458,6 +463,13 @@ input:focus, textarea:focus {
   }
   .topnav .social {
     margin: 0;
+  }
+  .sponsors {
+    margin-top: 1.5rem;
+    padding: 1.5rem 0;
+  }
+  .sponsors img {
+    padding: 0 0.5rem;
   }
   .content-centered {
     padding: 2rem 1rem;
@@ -471,22 +483,34 @@ input:focus, textarea:focus {
   }
   .column2 {
     text-align: center;
-    border-bottom: 1px solid var(--border-grey);
     padding-bottom: 2rem;
   }
   .column2 label {
     text-align: left;
   }
+  .reverse-sm {
+    flex-wrap: wrap-reverse;
+  }
   .columnform input:not([type=submit]), .columnform textarea, .columnform label {
-    width: 100%;
+    width: 95%;
+  }
+  .bordered {
+    border-bottom: 1px solid var(--border-grey);
+    margin-bottom: 2rem;
   }
   .mp {
     padding: 2rem;
+  }
+  .content-odd {
+    margin-top: 0;
+  }
+  .card2 {
+    padding: 0 1rem 1rem 1rem;
   }
 }
 
 @media only screen and (max-width: 576px) {
   .mp {
-    padding: 0;
+    padding: 2rem 0 0 0;
   }
 }
