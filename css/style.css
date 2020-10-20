@@ -156,40 +156,163 @@ input:focus, textarea:focus {
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid var(--border-grey);
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.25rem;
   margin-bottom: 2.5rem;
 }
 
-.topnav nav a {
-  text-decoration: none;
-  color: var(--text-color);
-  padding: 0.5rem;
+.topnav .dropdown__title {
+  background-color: transparent;
+  border: none;
+  font-family: inherit;
 }
 
-.topnav nav a:hover {
-  border-bottom: 3px solid var(--text-color-light);
+.topnav nav {
+  padding: 0 1rem;
+  display: grid;
+  place-items: center;
+}
+
+.topnav nav > ul {
+  grid-auto-flow: column;
+}
+
+.topnav nav > ul > li {
+  margin: 0 0.5rem;
+}
+
+.topnav nav > ul > li a,
+.topnav nav > ul > li .dropdown__title {
+  text-decoration: none;
+  color: var(--text-color);
+  text-align: center;
+  display: inline-block;
+  border-top: 3px solid transparent;
+}
+
+.topnav nav > ul > li a:focus,
+.topnav nav > ul > li .dropdown__title:focus {
+  outline: none;
+}
+
+.topnav nav > ul > li > a,
+.topnav nav > ul > li .dropdown__title {
+  padding: 0.75rem 0.5rem;
 }
 
 .topnav nav .current a, .topnav nav .current a:hover {
   border-bottom: 3px solid var(--primary);
 }
 
-.topnav nav .current a:focus {
-  border-bottom: 0;
+.topnav nav > ul > li > a:hover, .topnav nav > ul > li > a:focus,
+.topnav nav > ul > li .dropdown__title:hover,
+.topnav nav > ul > li .dropdown__title:focus {
+  border-bottom: 3px solid var(--text-color-light);
+  border-top-color: var(--text-color-light);
 }
 
-.topnav ul, .topnav li {
-  display: inline-block;
+.topnav nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+}
+
+.topnav nav ul li {
+  padding: 0;
+}
+
+.topnav .dropdown {
+  position: relative;
+}
+
+.topnav .dropdown .dropdown__title {
+  display: inline-flex;
+  align-items: center;
+  padding-right: 0;
+}
+
+.topnav .dropdown .dropdown__title:after {
+  content: "";
+  border: 0.5rem solid transparent;
+  border-top-color: var(--border-grey-dark);
+  margin-left: 0.25em;
+  transform: translateY(0.25em);
+}
+
+.topnav .dropdown .dropdown__menu {
+  position: absolute;
+  min-width: 15ch;
+  left: 50%;
+  top: calc(100% - 0.25rem);
+  -webkit-transition: 280ms all 120ms ease-out;
+  transition: 280ms all 120ms ease-out;
+  -webkit-transform: rotateX(-90deg) translateX(-50%);
+          transform: rotateX(-90deg) translateX(-50%);
+  -webkit-transform-origin: top center;
+          transform-origin: top center;
+  visibility: hidden;
+  opacity: 0.3;
+  padding: 0.5em 0;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.25);
+}
+
+.topnav .dropdown .dropdown__menu a {
+  display: block;
+  padding: 0.5em;
+  opacity: 0;
+}
+
+.topnav .dropdown .dropdown__menu a:hover {
+  background-color: var(--primary);
+  color: #fff;
+}
+.topnav .dropdown .dropdown__menu a:focus {
+  outline: none;
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.topnav .dropdown:after {
+  content: "";
+  border: 0.5rem solid transparent;
+  border-bottom-color: var(--border-grey);
+  position: absolute;
+  top: calc(100% - 1.25rem);
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: 280ms all 120ms ease-out;
+  transition: 280ms all 120ms ease-out;
+  opacity: 0;
+  will-change: opacity;
+}
+
+.topnav .dropdown:hover .dropdown__menu, .topnav .dropdown:focus-within .dropdown__menu {
+  opacity: 1;
+  -webkit-transform: rotateX(0) translateX(-50%);
+          transform: rotateX(0) translateX(-50%);
+  visibility: visible;
+}
+
+.topnav .dropdown:hover .dropdown__menu a, .topnav .dropdown:focus-within .dropdown__menu a {
+  opacity: 1;
+}
+
+.topnav .dropdown:hover:after, .topnav .dropdown:focus-within:after {
+  opacity: 1;
 }
 
 .topnav .social li {
+  display: inline-block;
   margin: 0 0.2rem;
 }
 
 .topnav .social {
   margin-left: auto;
 
-}
+} 
 
 .topnav svg, .bottomcontent svg {
   fill: var(--text-color);
@@ -422,9 +545,12 @@ input:focus, textarea:focus {
   .topnav {
     flex-direction: column;
   }
+
   .topnav nav, .topnav .social {
     align-self: stretch;  
   }
+
+  /* 
   .topnav nav ul {
     display: flex;
     flex-direction: column;
@@ -440,7 +566,7 @@ input:focus, textarea:focus {
   .topnav nav a:hover {
     background-color: var(--text-color);
     color: #fff;
-  }
+  } */
   .topnav .hamburger {
     display: block;
     align-self: flex-end;
@@ -514,3 +640,6 @@ input:focus, textarea:focus {
     padding: 2rem 0 0 0;
   }
 }
+
+
+

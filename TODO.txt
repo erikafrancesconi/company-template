@@ -11,3 +11,4 @@ OK - 9. clean up css, replace divs with sections
 OK - 10. analize page structure
 OK - 11. sistema le spaziature su cell
 OK - 12. sistema l'hero su cell (meglio flexbox?)
+13 - Pubblica su EFLab
