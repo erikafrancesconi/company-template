@@ -2,7 +2,7 @@ OK - 0. do i need normalize.css?
 OK - 1. social icons are too small to tap
 OK - 2. check if margin and paddings are the same (use rem in sections)
 3. test with multiple browsers
-4. dropdown menu on header; remove social and contact button (it can be on the menu). Menu on the right?
+MANCA GESTIONE RESPONSIVE - 4. dropdown menu on header
 5. skip link
 INGUARDABILE - 6. focus-within per evidenziare l'elemento se un suo figlio ha il focus
 OK - 7. use rem for font sizes & margin/padding (only sections)
@@ -11,4 +11,7 @@ OK - 9. clean up css, replace divs with sections
 OK - 10. analize page structure
 OK - 11. sistema le spaziature su cell
 OK - 12. sistema l'hero su cell (meglio flexbox?)
-13 - Pubblica su EFLab
+OK - 13 - Le icone social in alto non sono responsive
+14 - Run Lighthouse
+15 - Pubblica su EFLab
+
