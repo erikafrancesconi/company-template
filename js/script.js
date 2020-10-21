@@ -16,19 +16,19 @@
   })
 
   // Dropdown Navigation
-  // const menuItems = document.querySelectorAll('li.dropdown');
-  // let timer;
-  // Array.prototype.forEach.call(menuItems, function(el) {
-  //   el.querySelector('a').addEventListener("click",  function(event) {
-  //     event.preventDefault();
-  //     if (this.parentNode.className == "dropdown") {
-  //       this.parentNode.className = "dropdown open";
-  //       this.setAttribute('aria-expanded', "true");
-  //     } else {
-  //       this.parentNode.className = "dropdown";
-  //       this.setAttribute('aria-expanded', "false");
-  //     }
-  //     return false;
-  //   });
-  // });
+  const menuItems = document.querySelectorAll('li.dropdown');
+  Array.prototype.forEach.call(menuItems, function(el) {
+    const links = el.querySelector('a');
+    links.addEventListener("click",  function(event) {
+      event.preventDefault();
+      if (this.parentNode.className == "dropdown") {
+        this.parentNode.className = "dropdown open";
+        this.setAttribute('aria-expanded', "true");
+      } else {
+        this.parentNode.className = "dropdown";
+        this.setAttribute('aria-expanded', "false");
+      }
+      return false;
+    });
+  });
 })();
