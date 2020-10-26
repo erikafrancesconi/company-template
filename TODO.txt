@@ -13,9 +13,13 @@ OK - 5. skip link
 NO - 6. focus-within per evidenziare l'elemento se un suo figlio ha il focus
 
 3. test with multiple browsers
+  - Chrome on Linux OK
+  - Firefox on Linux OK
 8. dark mode
 18 - NVDA
 19 - WCAG Checklist
+20 - Chromebox
+21 - Wave
 14 - Minify?
 15 - Run Lighthouse
 17 - Pubblica su EFLab
