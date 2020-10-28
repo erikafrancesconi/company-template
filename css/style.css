@@ -491,6 +491,12 @@ input:focus, textarea:focus {
   color: #fff;
 }
 
+img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: attr(width) / attr(height);
+}
+
 .center {
   text-align: center;
 }
